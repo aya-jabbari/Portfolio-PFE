@@ -1,0 +1,104 @@
+@import "tailwindcss" source(none);
+@source "../**/*.{js,ts,jsx,tsx}";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* ── Abyssal Tech dark palette (navy) ── */
+  --color-abyssal-base: #070D16;
+  --color-abyssal-surface: #0F1D30;
+  --color-abyssal-surface-hover: #16304F;
+  --color-abyssal-border: #1E3A5C;
+  --color-abyssal-border-hover: #3F6690;
+  --color-abyssal-text: #F8FAFC;
+  --color-abyssal-text-muted: #9FB9D4;
+  --color-abyssal-text-faint: #5B7693;
+  --color-abyssal-accent: #6E93BD;
+  --color-abyssal-accent-hover: #3F6690;
+  /* ── Warm section palette (navy/steel tones used in content sections) ── */
+  --color-warm-975: #0D1826;
+  --color-warm-950: #0F2238;
+  --color-warm-925: #122A44;
+  --color-warm-900: #16304F;
+  --color-warm-800: #204266;
+  --color-warm-700: #3F6690;
+  --color-warm-500: #5B6B80;
+  --color-warm-400: #96334F;
+  --color-warm-300: #9FB9D4;
+  --color-warm-200: #DCE3ED;
+  --color-warm-150: #EEF1F5;
+  --color-warm-100: #F7F8FA;
+  --color-warm-50: #FAFBFC;
+
+  /* ── Colors ── */
+  --color-cream-50: #F8F9FB;
+  --color-cream-100: #EEF1F5;
+  --color-cream-200: #E1E6EE;
+  --color-blush-50: #EEF3F8;
+  --color-blush-100: #DDE6F0;
+  --color-rose-300: #B4607D;
+  --color-rose-500: #7A2840;
+  --color-rose-600: #5F1F33;
+  --color-plum-300: #9FB9D4;
+  --color-plum-500: #3F6690;
+  --color-plum-700: #16304F;
+  --color-plum-900: #0C1724;
+  --color-success-600: #4A7C59;
+  --color-warning-600: #9C6B2D;
+  --color-error-600: #A8424A;
+
+  /* ── Fonts ── */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ── Type scale ── */
+  --text-display-xl: clamp(3.25rem, 6vw, 5.25rem);
+  --text-display-lg: clamp(2.5rem, 4.5vw, 3.75rem);
+  --text-display-md: clamp(1.75rem, 2.5vw, 2.25rem);
+  --text-display-sm: 1.375rem;
+  --text-body-lg: 1.125rem;
+  --text-body-md: 1rem;
+  --text-body-sm: 0.9375rem;
+  --text-body-xs: 0.8125rem;
+  --text-eyebrow: 0.75rem;
+  --text-chip: 0.8125rem;
+
+  /* ── Border radii ── */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+
+  /* ── Shadows (plum-tinted) ── */
+  --shadow-soft: 0 4px 16px -4px rgba(42, 27, 45, 0.06);
+  --shadow-card: 0 12px 32px -12px rgba(42, 27, 45, 0.10);
+  --shadow-card-hover: 0 20px 48px -16px rgba(42, 27, 45, 0.16);
+  --shadow-cta: 0 12px 28px -8px rgba(122, 40, 64, 0.32);
+  --shadow-cta-hover: 0 18px 40px -10px rgba(122, 40, 64, 0.42);
+
+  /* ── Transition durations ── */
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --duration-page: 400ms;
+
+  /* ── Easing ── */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasis: cubic-bezier(0.3, 0, 0, 1.2);
+
+  /* ── Container max-widths ── */
+  --max-width-narrow: 720px;
+  --max-width-default: 1100px;
+  --max-width-wide: 1280px;
+  --max-width-prose: 640px;
+
+  /* ── Breakpoints ── */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+}

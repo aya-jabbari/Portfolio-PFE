@@ -1,0 +1,93 @@
+@import "./fonts.css";
+@import "./tailwind.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    min-width: 320px;
+  }
+
+  body {
+    @apply bg-cream-50 font-sans text-plum-700 antialiased transition-colors duration-500;
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background-color: var(--color-abyssal-base);
+    color: var(--color-abyssal-text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-plum-900 dark:text-abyssal-text;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: var(--color-blush-100);
+    color: var(--color-plum-900);
+  }
+
+  .dark ::selection {
+    background-color: var(--color-abyssal-surface-hover);
+    color: var(--color-abyssal-text);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-eyebrow uppercase font-semibold tracking-[0.18em] text-rose-500;
+  }
+
+  .container-default {
+    @apply mx-auto w-full px-6 lg:px-14;
+    max-width: var(--max-width-default);
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full px-6 lg:px-14;
+    max-width: var(--max-width-narrow);
+  }
+
+  .container-wide {
+    @apply mx-auto w-full px-6 lg:px-14;
+    max-width: var(--max-width-wide);
+  }
+}
+
+@keyframes blob {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  33%  { transform: translate(30px, -50px) scale(1.1); }
+  66%  { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 15s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
