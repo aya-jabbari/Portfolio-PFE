@@ -68,6 +68,10 @@ export const certificationIssuers: CertificationIssuer[] = [
         title: "ChatGPT & Generative AI",
         description: "Practical use of LLMs and prompt engineering.",
       },
+      {
+        title: "SQL",
+        description: "Querying, filtering, and aggregating relational data.",
+      },
     ],
   },
   {
